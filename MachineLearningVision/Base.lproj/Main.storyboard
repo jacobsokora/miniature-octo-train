@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Classifier View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ClassifierViewController" customModule="MachineLearningVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pID-Yb-abl">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="NSF-3e-7LG">
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" id="srY-Zh-WPG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="organize" id="EE8-91-RWq">
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="BYZ-38-t0r" id="eCJ-WT-KWI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iB5-4F-7cZ">
+                                <rect key="frame" x="0.0" y="20" width="414" height="336"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LdV-Y1-tHX">
+                                <rect key="frame" x="0.0" y="356" width="414" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iB5-4F-7cZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3AE-8P-bQe"/>
+                            <constraint firstItem="pID-Yb-abl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AH1-PV-1wq"/>
+                            <constraint firstItem="pID-Yb-abl" firstAttribute="top" secondItem="LdV-Y1-tHX" secondAttribute="bottom" id="CLX-vl-4fo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pID-Yb-abl" secondAttribute="bottom" id="HaJ-vh-HqY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iB5-4F-7cZ" secondAttribute="trailing" id="NXL-3F-moA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pID-Yb-abl" secondAttribute="trailing" id="O7a-c9-Khz"/>
+                            <constraint firstItem="LdV-Y1-tHX" firstAttribute="top" secondItem="iB5-4F-7cZ" secondAttribute="bottom" id="bbr-xO-jgn"/>
+                            <constraint firstItem="iB5-4F-7cZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jgf-Z9-BhH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LdV-Y1-tHX" secondAttribute="trailing" id="sxA-lx-YD4"/>
+                            <constraint firstItem="LdV-Y1-tHX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tR5-rJ-Q7m"/>
+                            <constraint firstItem="iB5-4F-7cZ" firstAttribute="height" secondItem="LdV-Y1-tHX" secondAttribute="height" id="y6X-hx-gsf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputImageView" destination="iB5-4F-7cZ" id="1Hl-g4-zXk"/>
+                        <outlet property="outputTextView" destination="LdV-Y1-tHX" id="1UQ-SA-n8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
